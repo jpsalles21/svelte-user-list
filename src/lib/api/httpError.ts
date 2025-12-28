@@ -1,6 +1,6 @@
 import type { ApiError } from '$lib/types/api-error'
 
-export function mapHttpError(status: number): ApiError {
+export const mapHttpError = (status: number): ApiError =>{
   switch (status) {
     case 401:
       return { type: 'unauthorized' }

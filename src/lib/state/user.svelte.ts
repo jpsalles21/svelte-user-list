@@ -11,7 +11,7 @@ export const getUsers = () => {
   return users
 }
 
-export async function loadUsers() {
+export const loadUsers = async () =>   {
   users = { kind: 'loading' }
   users = await fetchUsers()
 }
